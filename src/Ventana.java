@@ -82,27 +82,22 @@ public class Ventana extends JFrame {
         registrarNodo("Ambato");
         registrarNodo("Riobamba");
 
-        // Ruta 1: Sierra (Quito -> Ambato -> Riobamba -> Guayaquil)
         agregarNoDirigida(grafoRuta1, "Quito", "Ambato", 150);
         agregarNoDirigida(grafoRuta1, "Ambato", "Riobamba", 55);
         agregarNoDirigida(grafoRuta1, "Riobamba", "Guayaquil", 270);
 
-        // Conexiones "largas" para que existan en Ruta 1 pero no sean la mejor opcion para costa
         agregarNoDirigida(grafoRuta1, "Quito", "Santo Domingo", 200);
         agregarNoDirigida(grafoRuta1, "Santo Domingo", "Quevedo", 200);
         agregarNoDirigida(grafoRuta1, "Quevedo", "Guayaquil", 250);
 
-        // Ruta 2: Costa (Quito -> Santo Domingo -> Quevedo -> Guayaquil)
         agregarNoDirigida(grafoRuta2, "Quito", "Santo Domingo", 130);
         agregarNoDirigida(grafoRuta2, "Santo Domingo", "Quevedo", 115);
         agregarNoDirigida(grafoRuta2, "Quevedo", "Guayaquil", 180);
 
-        // Conexiones "largas" para que existan en Ruta 2 pero no sean la mejor opcion para sierra
         agregarNoDirigida(grafoRuta2, "Quito", "Ambato", 220);
         agregarNoDirigida(grafoRuta2, "Ambato", "Riobamba", 120);
         agregarNoDirigida(grafoRuta2, "Riobamba", "Guayaquil", 340);
 
-        // Ruta 3: Mixta (Costa hasta Quevedo, luego sube a sierra y baja a Guayaquil)
         agregarNoDirigida(grafoRuta3, "Quito", "Santo Domingo", 130);
         agregarNoDirigida(grafoRuta3, "Santo Domingo", "Quevedo", 115);
         agregarNoDirigida(grafoRuta3, "Quevedo", "Ambato", 170);
