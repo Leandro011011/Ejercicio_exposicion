@@ -52,10 +52,8 @@ public class Ventana extends JFrame {
         lblRuta = new JLabel(" ");
         panelDerecha.add(lblRuta);
 
-        panelDerecha.add(new JLabel("Por que no las otras rutas"));
         txtPorqueNo = new JTextArea(12, 22);
-        txtPorqueNo.setLineWrap(true);
-        txtPorqueNo.setWrapStyleWord(true);
+
         panelDerecha.add(new JScrollPane(txtPorqueNo));
 
         panelPrincipal.add(panelDerecha, BorderLayout.EAST);
@@ -64,8 +62,6 @@ public class Ventana extends JFrame {
 
         btnCalcular.addActionListener(e -> calcular());
 
-        txtOrigen.setText("Quito");
-        txtDestino.setText("Guayaquil");
         calcular();
     }
 
@@ -286,7 +282,7 @@ public class Ventana extends JFrame {
     }
 
     public static void main(String[] args) {
-        JFrame ventana = new JFrame("Rutas predefinidas - Bellman Ford");
+        JFrame ventana = new JFrame("Bellman Ford");
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setSize(1100, 700);
         ventana.setLocationRelativeTo(null);
