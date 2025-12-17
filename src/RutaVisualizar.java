@@ -33,7 +33,6 @@ public class RutaVisualizar extends JPanel {
     private double kRepulsion = 26000.0;
     private double amortiguacion = 0.86;
 
-    private Font fuenteNodo = new Font("SansSerif", Font.PLAIN, 15);
 
     public RutaVisualizar() {
         setOpaque(true);
@@ -210,7 +209,7 @@ public class RutaVisualizar extends JPanel {
 
         Graphics2D g2 = (Graphics2D) g.create();
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g2.setFont(fuenteNodo);
+
 
         if (grafo == null || grafo.obtenerCantidadVertices() == 0) {
             g2.dispose();

@@ -273,7 +273,7 @@ public class Ventana extends JFrame {
         return String.format(Locale.US, "%.1f", v);
     }
 
-    private static final class EvalRuta {
+    private final class EvalRuta {
         String nombre;
         boolean tieneRuta;
         double distanciaKm;

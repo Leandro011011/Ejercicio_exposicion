@@ -1,8 +1,6 @@
 import java.util.*;
 public class BellmanFordAlgoritmo {
 
-    private static final double EPS = 1e-12;
-
     public Resultado ejecutar(Grafo grafo, String idOrigen) {
         Resultado r = new Resultado();
         r.grafo = grafo;
@@ -75,7 +73,7 @@ public class BellmanFordAlgoritmo {
                 double nueva = du + w;
                 double dv = r.distancias.get(v);
 
-                if (nueva + EPS < dv) {
+                if (nueva < dv) {
                     r.distancias.set(v, nueva);
                     r.predecesor.set(v, u);
                     cambio = true;
@@ -97,7 +95,7 @@ public class BellmanFordAlgoritmo {
             double nueva = du + w;
             double dv = r.distancias.get(v);
 
-            if (nueva + EPS < dv) {
+            if (nueva < dv) {
                 r.cicloNegativo = true;
                 break;
             }
