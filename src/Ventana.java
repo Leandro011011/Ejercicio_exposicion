@@ -157,7 +157,6 @@ public class Ventana extends JFrame {
             panelDibujo.limpiarRuta();
 
             StringBuilder sb = new StringBuilder();
-            sb.append("Comparacion por rutas:\n\n");
             sb.append(resumenComparacion(e1, null)).append("\n");
             sb.append(resumenComparacion(e2, null)).append("\n");
             sb.append(resumenComparacion(e3, null)).append("\n");
